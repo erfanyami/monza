@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>پیشنهاد همکاری استراتژیک بازاریابی دیجیتال | مونزا × یکتانت</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --monza-orange:#FF6600;
+    --monza-orange-dark:#e05a00;
+    --monza-dark:#1c1e20;
+    --monza-dark-2:#222527;
+    --ink:#20242a;
+    --muted:#6b7280;
+    --line:#e8e4de;
+    --paper:#fffaf5;
+    --card:#ffffff;
+    --a-tier:#FF6600;
+    --b-tier:#c98a2c;
+    --c-tier:#8a8f98;
+    --verified:#1f7a4d;
+    --inference:#2563a8;
+    --recommend:#b7460e;
+    --client-input:#6b3fa0;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    font-family:'Vazirmatn', Tahoma, sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.85;
+    font-size:15.5px;
+  }
+  .wrap{flex:1;min-width:0;padding:0 0 60px;}
+  .layout{max-width:1180px;margin:0 auto;padding:26px 24px 0;display:flex;gap:26px;align-items:flex-start;}
+  .footer-wrap{max-width:1040px;margin:0 auto;padding:0 24px 60px;}
+  @media(max-width:900px){.layout{flex-direction:column;padding:20px 16px 0;} .footer-wrap{padding:0 16px 50px;}}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:
+      linear-gradient(180deg, rgba(28,30,32,.97), rgba(28,30,32,.99)),
+      repeating-linear-gradient(135deg, rgba(255,102,0,.06) 0 2px, transparent 2px 26px);
+    background-color:var(--monza-dark);
+    color:#fff;
+    padding:48px 24px 40px;
+    border-bottom:5px solid var(--monza-orange);
+  }
+  .hero-inner{max-width:1040px;margin:0 auto;}
+  .brand-row{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:18px;margin-bottom:34px;}
+  .monza-wordmark{
+    font-family:'Vazirmatn', sans-serif;
+    font-weight:800;
+    font-size:30px;
+    letter-spacing:3px;
+    color:#fff;
+  }
+  .monza-wordmark span{color:var(--monza-orange);}
+  .monza-tag{font-size:11.5px;color:#c8c8c8;letter-spacing:1px;margin-top:2px;}
+  .x-divider{font-size:20px;color:#5a5d60;font-weight:300;margin:0 6px;}
+  .ykt-mark{font-size:20px;font-weight:700;color:#fff;border:1px solid #444;border-radius:8px;padding:6px 14px;}
+  .ykt-mark small{display:block;font-weight:400;font-size:10.5px;color:#b8b8b8;letter-spacing:.5px;}
+
+  .hero h1{font-size:29px;font-weight:800;margin:0 0 10px;line-height:1.5;}
+  .hero p.lead{color:#d8d8d8;font-size:15px;max-width:760px;margin:0 0 22px;}
+  .hero-meta{display:flex;gap:28px;flex-wrap:wrap;font-size:13px;color:#b9b9b9;border-top:1px solid #3a3c3e;padding-top:16px;}
+  .hero-meta b{color:#fff;font-weight:600;}
+
+  /* ---------- LEGEND ---------- */
+  .legend{
+    display:flex;gap:10px;flex-wrap:wrap;background:#fff;
+    border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:-26px auto 36px;
+    max-width:1040px;font-size:12.5px;color:var(--muted);
+  }
+  .legend b{color:var(--ink);}
+  .chip{display:inline-flex;align-items:center;gap:6px;padding:2px 10px;border-radius:20px;font-size:11px;font-weight:700;}
+  .chip.verified{background:#e8f6ee;color:var(--verified);}
+  .chip.inference{background:#eaf1fb;color:var(--inference);}
+  .chip.recommend{background:#fdece1;color:var(--recommend);}
+  .chip.client{background:#f1eaf9;color:var(--client-input);}
+
+  /* ---------- SECTIONS ---------- */
+  section{margin:44px 0;}
+  .sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:18px;border-bottom:2px solid var(--monza-dark);padding-bottom:10px;}
+  .sec-num{
+    background:var(--monza-orange);color:#fff;font-weight:800;font-size:13px;
+    width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
+  .sec-head h2{font-size:20px;margin:0;font-weight:800;color:var(--monza-dark);}
+  .sec-sub{color:var(--muted);font-size:13px;margin-top:2px;}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;box-shadow:0 2px 10px rgba(20,20,20,.03);}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  @media(max-width:760px){.grid-2,.grid-3{grid-template-columns:1fr;} .brand-row{flex-direction:column;align-items:flex-start;}}
+
+  .kicker{font-size:11px;font-weight:800;letter-spacing:1px;color:var(--monza-orange);text-transform:uppercase;margin-bottom:6px;}
+
+  ul.clean{margin:0;padding:0;list-style:none;}
+  ul.clean li{position:relative;padding-right:20px;margin-bottom:10px;}
+  ul.clean li::before{content:"";position:absolute;right:0;top:9px;width:7px;height:7px;background:var(--monza-orange);border-radius:50%;}
+
+  table{width:100%;border-collapse:collapse;font-size:13.5px;background:#fff;}
+  th{background:var(--monza-dark);color:#fff;text-align:right;padding:11px 12px;font-weight:700;font-size:12.5px;}
+  td{padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top;}
+  tr:last-child td{border-bottom:none;}
+  .table-wrap{overflow-x:auto;border-radius:12px;border:1px solid var(--line);}
+
+  .badge{display:inline-block;padding:3px 10px;border-radius:6px;font-size:11.5px;font-weight:800;color:#fff;white-space:nowrap;}
+  .badge-A{background:var(--a-tier);}
+  .badge-B{background:var(--b-tier);}
+  .badge-C{background:var(--c-tier);}
+
+  .problem-card{border-right:4px solid var(--recommend);background:#fff6f0;border-radius:10px;padding:14px 18px;margin-bottom:12px;}
+  .problem-card h4{margin:0 0 4px;font-size:14.5px;color:var(--monza-dark);}
+  .problem-card p{margin:0;font-size:13.5px;color:#4a4a4a;}
+
+  .funnel{display:flex;flex-direction:column;gap:6px;margin:18px 0;}
+  .funnel .step{
+    background:linear-gradient(90deg, var(--monza-orange), #ffb066);
+    color:#fff;font-weight:700;font-size:13px;text-align:center;
+    padding:11px;border-radius:8px;
+  }
+  .funnel .step small{display:block;font-weight:400;font-size:11px;opacity:.92;margin-top:2px;}
+  .funnel .step.w1{width:100%;}
+  .funnel .step.w2{width:88%;margin:0 auto;}
+  .funnel .step.w3{width:76%;margin:0 auto;}
+  .funnel .step.w4{width:64%;margin:0 auto;background:linear-gradient(90deg,#b6480f,#e07a2b);}
+  .funnel .step.w5{width:52%;margin:0 auto;background:linear-gradient(90deg,#8a3609,#c9601f);}
+
+  .scenario{border-radius:14px;border:2px solid var(--line);padding:20px;height:100%;}
+  .scenario.reco{border-color:var(--monza-orange);box-shadow:0 4px 18px rgba(255,102,0,.12);}
+  .scenario h3{margin:0 0 4px;font-size:16px;}
+  .scenario .stag{font-size:11.5px;color:var(--muted);margin-bottom:14px;}
+  .alloc-bar{display:flex;height:10px;border-radius:6px;overflow:hidden;margin:10px 0 6px;}
+  .alloc-bar span{display:block;height:100%;}
+  .alloc-legend{font-size:11.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 14px;margin-bottom:14px;}
+  .alloc-legend i{display:inline-block;width:8px;height:8px;border-radius:2px;margin-left:4px;}
+
+  .kpi-note{background:#fff6ea;border:1px dashed #e0a75a;border-radius:10px;padding:12px 16px;font-size:12.5px;color:#7a4a10;margin-top:14px;}
+
+  .timeline{position:relative;padding-right:26px;border-right:2px solid var(--line);}
+  .tl-item{margin-bottom:26px;position:relative;}
+  .tl-item::before{content:"";position:absolute;right:-33px;top:2px;width:14px;height:14px;border-radius:50%;background:var(--monza-orange);border:3px solid #fff;box-shadow:0 0 0 2px var(--monza-orange);}
+  .tl-item h4{margin:0 0 4px;font-size:14.5px;color:var(--monza-dark);}
+  .tl-item .phase-tag{font-size:11px;color:var(--monza-orange);font-weight:800;}
+
+  .qa-list{counter-reset:q;}
+  .qa-list li{counter-increment:q;position:relative;padding-right:30px;margin-bottom:12px;font-size:13.5px;}
+  .qa-list li::before{content:counter(q);position:absolute;right:0;top:0;background:var(--monza-dark);color:#fff;width:20px;height:20px;border-radius:50%;font-size:11px;display:flex;align-items:center;justify-content:center;font-weight:700;}
+
+  .footer-box{margin-top:60px;background:var(--monza-dark);color:#ccc;border-radius:16px;padding:28px 26px;font-size:12.5px;}
+  .footer-box b{color:#fff;}
+  .footer-box .fwordmark{font-weight:800;color:#fff;letter-spacing:2px;}
+  .footer-box .fwordmark span{color:var(--monza-orange);}
+
+  .src-tag{font-size:10.5px;color:var(--verified);border:1px solid #bfe4cf;background:#eefaf2;padding:1px 7px;border-radius:10px;margin-right:4px;white-space:nowrap;}
+
+  .exec-highlight{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px;}
+  .exec-highlight .box{background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px;text-align:center;}
+  .exec-highlight .box .n{font-size:13px;font-weight:800;color:var(--monza-orange);}
+  .exec-highlight .box .l{font-size:11px;color:var(--muted);margin-top:3px;}
+  @media(max-width:760px){.exec-highlight{grid-template-columns:1fr 1fr;}}
+
+  /* ---------- SIDEBAR NAV ---------- */
+  .sidebar{width:240px;flex-shrink:0;position:sticky;top:20px;}
+  .sidebar-title{font-size:11px;font-weight:800;color:var(--muted);margin:0 4px 10px;letter-spacing:.5px;text-transform:uppercase;}
+  .side-nav{display:flex;flex-direction:column;gap:3px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:10px;box-shadow:0 2px 10px rgba(20,20,20,.03);}
+  .side-btn{display:flex;align-items:center;gap:10px;background:transparent;border:none;border-radius:10px;padding:10px 12px;font-family:inherit;font-size:13px;color:var(--ink);cursor:pointer;text-align:right;width:100%;transition:background .15s,color .15s;}
+  .side-btn:hover{background:#f5efe7;}
+  .side-btn.active{background:var(--monza-dark);color:#fff;}
+  .side-btn .tnum{background:var(--monza-orange);color:#fff;font-weight:800;font-size:10.5px;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .side-btn.active .tnum{background:#fff;color:var(--monza-dark);}
+  @media(max-width:900px){
+    .sidebar{width:100%;position:static;}
+    .side-nav{flex-direction:row;flex-wrap:nowrap;overflow-x:auto;gap:6px;-webkit-overflow-scrolling:touch;}
+    .side-btn{width:auto;white-space:nowrap;flex-shrink:0;}
+  }
+
+  section.tab-panel{display:none;margin-top:0;}
+  section.tab-panel.active{display:block;}
+  section.tab-panel:first-of-type.active{margin-top:0;}
+
+  .tab-pager{display:flex;justify-content:space-between;gap:10px;margin-top:36px;}
+  .pager-btn{flex:1;background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 16px;font-family:inherit;cursor:pointer;text-align:right;transition:border-color .15s;}
+  .pager-btn:hover{border-color:var(--monza-orange);}
+  .pager-btn .pg-tag{font-size:10.5px;color:var(--muted);}
+  .pager-btn .pg-title{font-size:13.5px;font-weight:700;color:var(--monza-dark);margin-top:2px;}
+  .pager-btn[disabled]{opacity:.35;cursor:default;}
+  .pager-btn[disabled]:hover{border-color:var(--line);}
+  @media(max-width:600px){.side-btn{font-size:12px;padding:9px 10px;}}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="brand-row">
+      <div>
+        <div class="monza-wordmark">MON<span>ZA</span></div>
+        <div class="monza-tag">۶۰ ماه خدمات پس از فروش &nbsp;|&nbsp; monzaelectric.shop</div>
+      </div>
+      <div style="display:flex;align-items:center;">
+        <span class="x-divider">×</span>
+        <div class="ykt-mark">یکتانت<small>YEKTANET PARTNERSHIP PROPOSAL</small></div>
+      </div>
+    </div>
+    <h1>پیشنهاد همکاری استراتژیک بازاریابی دیجیتال</h1>
+    <p class="lead">مسیر پیشنهادی برای گذار مونزا از یک برند متکی بر توزیع آفلاین چندکاناله، به یک برند دارای فروشگاه اینترنتی مستقل با قیف بازاریابی قابل اندازه‌گیری.</p>
+    <div class="hero-meta">
+      <div>تهیه‌شده برای: <b>مونزا (لوازم خانگی برقی)</b></div>
+      <div>تهیه‌شده توسط: <b>تیم فروش B2B یکتانت</b></div>
+      <div>تاریخ تهیه: <b>۲۲ شهریور ۱۴۰۵</b></div>
+      <div>نوع سند: <b>پروپوزال + اکشن‌پلن</b></div>
+    </div>
+  </div>
+</div>
+
+<div class="legend">
+  <b>راهنمای سطح اطمینان داده‌ها:</b>
+  <span class="chip verified">VERIFIED — منبع: Credential یکتانت</span>
+  <span class="chip inference">INFERENCE — استنتاج از داده‌های مونزا</span>
+  <span class="chip recommend">RECOMMENDATION — پیشنهاد استراتژیک</span>
+</div>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="sidebar-title">فهرست بخش‌ها</div>
+    <nav class="side-nav" id="sideNav">
+      <button class="side-btn active" id="tabbtn-1" onclick="showTab(1)"><span class="tnum">۱</span>خلاصه مدیریتی</button>
+      <button class="side-btn" id="tabbtn-2" onclick="showTab(2)"><span class="tnum">۲</span>شناخت کسب‌وکار</button>
+      <button class="side-btn" id="tabbtn-3" onclick="showTab(3)"><span class="tnum">۳</span>چالش فعلی</button>
+      <button class="side-btn" id="tabbtn-4" onclick="showTab(4)"><span class="tnum">۴</span>فرصت بازاریابی</button>
+      <button class="side-btn" id="tabbtn-5" onclick="showTab(5)"><span class="tnum">۵</span>استراتژی پیشنهادی</button>
+      <button class="side-btn" id="tabbtn-6" onclick="showTab(6)"><span class="tnum">۶</span>خدمات پیشنهادی</button>
+      <button class="side-btn" id="tabbtn-7" onclick="showTab(7)"><span class="tnum">۷</span>ترکیب رسانه‌ای</button>
+      <button class="side-btn" id="tabbtn-8" onclick="showTab(8)"><span class="tnum">۸</span>سناریوهای بودجه</button>
+      <button class="side-btn" id="tabbtn-9" onclick="showTab(9)"><span class="tnum">۹</span>چارچوب KPI</button>
+      <button class="side-btn" id="tabbtn-10" onclick="showTab(10)"><span class="tnum">۱۰</span>اندازه‌گیری و ردیابی</button>
+      <button class="side-btn" id="tabbtn-11" onclick="showTab(11)"><span class="tnum">۱۱</span>بهینه‌سازی</button>
+      <button class="side-btn" id="tabbtn-12" onclick="showTab(12)"><span class="tnum">۱۲</span>نقشه راه زمانی</button>
+      <button class="side-btn" id="tabbtn-13" onclick="showTab(13)"><span class="tnum">۱۳</span>دستاوردها</button>
+    </nav>
+  </aside>
+
+  <div class="wrap">
+
+  <!-- 1. EXECUTIVE SUMMARY -->
+  <section id="section-1" class="tab-panel active">
+    <div class="sec-head"><div class="sec-num">۱</div><div><h2>خلاصه مدیریتی</h2><div class="sec-sub">Executive Summary</div></div></div>
+    <div class="card">
+      <p>مونزا برندی با <b>زیرساخت توزیع آفلاین جاافتاده</b> است: حضور در زنجیره‌های بزرگ لوازم‌خانگی (سرای ایرانی، شهر لوازم خانگی، انتخاب من، امین برتر) و حضور مستمر در نمایشگاه‌های بین‌المللی تهران، اصفهان، مشهد و تبریز. در مقابل، <b>لایه دیجیتال برند بسیار جوان است</b>: دامنه فروشگاهی مستقل (monzaelectric.shop) تنها چند ماه از راه‌اندازی آن می‌گذرد.</p>
+      <p>مسئله اصلی مونزا <b>«Traffic و اعتبار ناکافی برای دامنه جدید» و «نبود قیف Performance قابل اندازه‌گیری»</b> است، نه ضعف برند یا محصول. این پروپوزال یک نقطه ورود کم‌ریسک و متمرکز (نه فروش کامل سبد خدمات یکتانت) برای ساخت این قیف پیشنهاد می‌دهد.</p>
+      <div class="exec-highlight">
+        <div class="box"><div class="n">چند ماه</div><div class="l">سن دامنه فروشگاه اینترنتی</div></div>
+        <div class="box"><div class="n">۶ خدمت</div><div class="l">اولویت ضروری فاز ۱ (نه کل سبد)</div></div>
+        <div class="box"><div class="n">۳ سناریو</div><div class="l">بودجه: محافظه‌کارانه / پیشنهادی / رشد</div></div>
+        <div class="box"><div class="n">۳ فاز</div><div class="l">نقشه راه ۶ ماهه</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. BUSINESS UNDERSTANDING -->
+  <section id="section-2" class="tab-panel">
+    <div class="sec-head"><div class="sec-num">۲</div><div><h2>شناخت کسب‌وکار</h2><div class="sec-sub">Business Understanding</div></div></div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="kicker">Business Model <span class="chip inference" style="margin-right:6px;">INFERENCE</span></div>
+        <p style="margin:0;">فروش لوازم‌خانگی برقی کوچک (اتو بخار، مخلوط‌کن، مولتی‌کوکر، هواپز، آب‌مرکبات‌گیر، آبمیوه‌گیر، آون توستر، اسپرسوساز، جاروبرقی، چای‌ساز، خردکن، گوشتکوب) از طریق سه کانال موازی: <b>خرده‌فروشی آفلاین</b> (زنجیره‌های لوازم خانگی)، <b>مارکت‌پلیس</b> (دیجی‌کالا، مدیریت‌شده توسط آلدی — زیرمجموعه مونزا) و <b>فروشگاه اینترنتی مستقل</b> (monzaelectric.shop، تازه‌تأسیس). موضع‌گیری برند بر پایه <b>«۶۰ ماه خدمات پس از فروش»</b> است — یعنی محور رقابتی، تضمین کیفیت/گارانتی است نه صرفاً قیمت.</p>
+      </div>
+      <div class="card">
+        <div class="kicker">Customer <span class="chip inference" style="margin-right:6px;">INFERENCE</span></div>
+        <p style="margin:0;">مخاطب اصلی، خانوار ایرانی با تصمیم خرید کالای بادوام (میانگین قیمت محصولات مشاهده‌شده در سایت بین ۱۱ تا ۲۷ میلیون تومان) است که به گارانتی و اعتبار برند حساس است. حضور در نمایشگاه‌های بین‌المللی چهار کلان‌شهر نشان می‌دهد مخاطب هدف صرفاً تهران نیست و پوشش ملی مد نظر برند است.</p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px;">
+      <div class="kicker">Marketing Objective</div>
+      <p style="margin:0;">رشد پیج اینستاگرام و افزایش بازدید پست‌ها یکی از اهداف اصلی این همکاری است — هدفی مستقل از قیف فروش سایت، که در بند ۶ و ۸ با سرویس و بودجه مشخص پوشش داده شده است.</p>
+    </div>
+
+    <div class="card" style="margin-top:16px;">
+      <div class="kicker">Funnel فعلی مونزا <span class="chip inference" style="margin-right:6px;">INFERENCE</span></div>
+      <div class="funnel">
+        <div class="step w1">Awareness <small>نمایشگاه / خرده‌فروشی / یک بیلبورد</small></div>
+        <div class="step w2">Visit <small>ترافیک ورودی به monzaelectric.shop — دامنه تازه‌تأسیس، بدون تاریخچه سئو</small></div>
+        <div class="step w3">Product View <small>مرور دسته‌بندی محصولات</small></div>
+        <div class="step w4">Add to Cart <small>بدون شواهد از فعال بودن ریتارگتینگ سبد رهاشده</small></div>
+        <div class="step w5">Purchase / Repeat <small>بدون داده از نرخ تبدیل یا خرید مجدد در اختیار ما</small></div>
+      </div>
+      <p style="font-size:12.5px;color:var(--muted);margin:6px 0 0;">این قیف بر اساس اطلاعات ارائه‌شده ترسیم شده؛ نرخ تبدیل هر مرحله نامشخص است.</p>
+    </div>
+  </section>
+
+  <!-- 3. CURRENT CHALLENGE -->
+  <section id="section-3" class="tab-panel">
+    <div class="sec-head"><div class="sec-num">۳</div><div><h2>چالش فعلی</h2><div class="sec-sub">Current Challenge</div></div></div>
+    <div class="problem-card">
+      <h4>۱. Traffic و اعتبار دامنه ناکافی</h4>
+      <p>فروشگاه اینترنتی فقط چند ماه سن دارد؛ در این بازه معمولاً اعتبار دامنه (Domain Authority) و رتبه ارگانیک هنوز شکل نگرفته است. بدون تزریق ترافیک هدفمند از منابع خارجی، رشد فروش آنلاین مستقیم کند خواهد بود.</p>
+    </div>
+    <div class="problem-card">
+      <h4>۲. عدم وجود Retargeting و Performance ساختاریافته</h4>
+      <p>هیچ مدرکی از فعالیت ریتارگتینگ، گوگل ادز، یا تبلیغات همسان/بنری ارائه نشده است. عملاً هر بازدیدکننده جدید سایت، پس از خروج، بدون هیچ مسیر بازگشتی از دست می‌رود.</p>
+    </div>
+    <div class="problem-card">
+      <h4>۳. کانال تبلیغاتی گذشته از رده خارج شده</h4>
+      <p>حضور تبلیغاتی پیشین در VOD (استارنت) بی‌اثر شده، چون این پلتفرم دیگر فعال نیست. جای‌گذاری محصول در فیلم‌های فیلیمو (کندو / کنکل) صرفاً Awareness غیرقابل ردیابی است و به هیچ مسیر تبدیل (Tracking/UTM) متصل نیست.</p>
+    </div>
+  </section>
+
+  <!-- 4. MARKETING OPPORTUNITY -->
+  <section id="section-4" class="tab-panel">
+    <div class="sec-head"><div class="sec-num">۴</div><div><h2>فرصت بازاریابی</h2><div class="sec-sub">Marketing Opportunity</div></div></div>
+    <div class="card">
+      <ul class="clean">
+        <li><b>تبدیل اعتبار آفلاین به دارایی دیجیتال:</b> مونزا برخلاف بسیاری از فروشگاه‌های اینترنتی نوپا، از صفر شروع نمی‌کند — توزیع فیزیکی، حضور در دیجی‌کالا و سابقه نمایشگاهی، سیگنال اعتماد آماده‌ای است که صرفاً باید به سمت دامنه مستقل هدایت شود.</li>
+        <li><b>جای خالی D2C مستقل:</b> راه‌اندازی monzaelectric.shop نشان می‌دهد مونزا قصد ساخت یک کانال فروش مستقیم با کنترل کامل بر داده مشتری، مستقل از خرده‌فروشی‌های آفلاین و مارکت‌پلیس‌ها را دارد — این دقیقاً همان نقطه‌ای است که ریتارگتینگ و ریتنشن مارکتینگ بیشترین بازده را دارند.</li>
+        <li><b>پوزیشن گارانتی ۶۰ ماهه، پیام تبلیغاتی آماده:</b> برخلاف رقبایی که صرفاً روی قیمت رقابت می‌کنند، مونزا یک پیام برند مشخص و قابل تبلیغ (اعتماد/گارانتی بلندمدت) دارد که برای فرمت‌های Awareness (همسان، بیلبورد دیجیتال) به‌خوبی جواب می‌دهد.</li>
+        <li><b>هم‌پوشانی جغرافیایی با حضور نمایشگاهی:</b> حضور در تهران، اصفهان، مشهد و تبریز فرصتی برای هدف‌گیری جغرافیایی هم‌زمان تبلیغات دیجیتال با این چهار شهر ایجاد می‌کند.</li>
+        <li><b>آمادگی برای سرمایه‌گذاری در شبکه‌های اجتماعی:</b> اولویت روشن مونزا برای رشد پیج و افزایش بازدید پست‌ها، امکان می‌دهد از همان فاز ۱ مستقیم وارد اجرا و تعریف KPI مشخص برای این کانال شویم، بدون نیاز به یک دوره آزمایشی طولانی.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 5. PROPOSED STRATEGY -->
+  <section id="section-5" class="tab-panel">
+    <div class="sec-head"><div class="sec-num">۵</div><div><h2>استراتژی پیشنهادی</h2><div class="sec-sub">Proposed Strategy</div></div></div>
+    <div class="card">
+      <p><span class="chip recommend">RECOMMENDATION</span>&nbsp; رویکرد پیشنهادی، <b>«ساخت قیف قبل از گسترش کانال»</b> است. به‌جای پخش بودجه بین تمام خدمات یکتانت، فاز ۱ روی شش خدمت متمرکز می‌شود که سه هدف اصلی را پوشش می‌دهند: Traffic ناکافی، نبود Retargeting، و هدف رشد شبکه‌های اجتماعی مونزا. توسعه به سمت PR/SEO، ریتنشن مارکتینگ و کانال‌های اجتماعی تکمیلی (تلگرام/لینکدین)، مشروط به عملکرد فاز ۱ و در دسترس بودن داده Tracking، در فازهای بعدی پیشنهاد می‌شود.</p>
+      <p style="margin-bottom:0;">این توالی از منطق پیش‌فرض تفکر پروژه پیروی می‌کند: <b>Business → Objective → Audience → Funnel → Problem → Opportunity → Channel → Service → Budget → KPI → Measurement → Optimization</b>.</p>
+    </div>
+  </section>
+
+  <!-- 6. RECOMMENDED SERVICES -->
+  <section id="section-6" class="tab-panel">
+    <div class="sec-head"><div class="sec-num">۶</div><div><h2>خدمات پیشنهادی یکتانت</h2><div class="sec-sub">Recommended Yektanet Services — Need-based, not Product-based</div></div></div>
+
+    <p style="font-size:13px;color:var(--muted);">طبقه‌بندی اولویت: <span class="badge badge-A">A — ضروری</span> پاسخ مستقیم به مسئله اصلی &nbsp;|&nbsp; <span class="badge badge-B">B — مکمل</span> تقویت Reach/Performance &nbsp;|&nbsp; <span class="badge badge-C">C — توسعه‌ای</span> فاز رشد بعدی</p>
+
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>سرویس</th><th>چرا مرتبط است</th><th>مرحله قیف</th><th>اولویت</th><th>هدف</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><b>تبلیغات همسان (Native)</b><br><span class="src-tag">VERIFIED</span></td>
+          <td>ظرفیت +۱ میلیارد نمایش روزانه در +۲,۳۰۰ وب‌سایت؛ سریع‌ترین مسیر تزریق Traffic معتبر به دامنه تازه‌تأسیس</td>
+          <td>Awareness → Visit</td>
+          <td><span class="badge badge-A">A</span></td>
+          <td>افزایش ترافیک ورودی</td>
+        </tr>
+        <tr>
+          <td><b>هدفمندسازی تبلیغات</b> (رفتارمحور / کلیدواژه‌ای)<br><span class="src-tag">VERIFIED</span></td>
+          <td>لایه هدف‌گیری روی تبلیغات همسان تا بودجه صرف مخاطب واجد شرایط شود، نه نمایش عمومی</td>
+          <td>Awareness → Visit</td>
+          <td><span class="badge badge-A">A</span></td>
+          <td>افزایش کیفیت ترافیک</td>
+        </tr>
+        <tr>
+          <td><b>ریتارگتینگ یکتانت</b><br><span class="src-tag">VERIFIED</span></td>
+          <td>در حال حاضر هیچ بازدیدکننده‌ای بازگردانده نمی‌شود؛ برای سایتی با ترافیک تازه، این خدمت زیرساخت اصلی تبدیل بازدید به فروش است</td>
+          <td>Visit → Purchase</td>
+          <td><span class="badge badge-A">A</span></td>
+          <td>افزایش نرخ تبدیل</td>
+        </tr>
+        <tr>
+          <td><b>Google Search Ads</b> (از طریق فرست‌ادز)<br><span class="src-tag">VERIFIED</span></td>
+          <td>جذب تقاضای دارای نیت خرید (جستجوی مدل/دسته محصول)؛ مکمل ضعف سئوی طبیعی دامنه جدید</td>
+          <td>Awareness → Visit → Purchase</td>
+          <td><span class="badge badge-A">A</span></td>
+          <td>جذب تقاضای آماده خرید</td>
+        </tr>
+        <tr>
+          <td><b>کمپین محصول</b> (سبد رهاشده / محصولات مشابه)<br><span class="src-tag">VERIFIED</span></td>
+          <td>کاتالوگ چندمحصولی مونزا برای نمایش هوشمند و بازیابی سبدهای رهاشده مناسب است؛ مکمل مستقیم ریتارگتینگ در پایین قیف</td>
+          <td>Add to Cart → Purchase</td>
+          <td><span class="badge badge-A">A</span></td>
+          <td>افزایش نرخ تکمیل خرید</td>
+        </tr>
+        <tr>
+          <td><b>تبلیغات اینستاگرام (بازدیدی)</b><br><span class="src-tag">VERIFIED</span></td>
+          <td>انتشار تبلیغ روی صفحات مختلف اینستاگرام با پرداخت هزینه به ازای هر Impression؛ ظرفیت روزانه ۱.۵ تا ۳ میلیون بازدید — پاسخ مستقیم به هدف افزایش بازدید پست‌های مونزا</td>
+          <td>Awareness / Engagement</td>
+          <td><span class="badge badge-A">A</span></td>
+          <td>افزایش بازدید پست/پیج</td>
+        </tr>
+        <tr>
+          <td><b>رپورتاژ آگهی و لینک‌سازی</b> (تریبون)<br><span class="src-tag">VERIFIED</span></td>
+          <td>ساخت سریع اعتبار دامنه (Domain Authority) برای سایت تازه‌تأسیس، مکمل بلندمدت کانال‌های پولی</td>
+          <td>Awareness → Visit (ارگانیک)</td>
+          <td><span class="badge badge-B">B</span></td>
+          <td>اعتبار سئو و برند</td>
+        </tr>
+        <tr>
+          <td><b>بیلبورد دیجیتال یکتانت</b><br><span class="src-tag">VERIFIED</span></td>
+          <td>نسخه دیجیتال و قابل اندازه‌گیری از همان اقدامی که مونزا قبلاً به‌صورت فیزیکی (عباس‌آباد) انجام داده؛ نمایش انحصاری روی رسانه‌های سطح +A</td>
+          <td>Awareness</td>
+          <td><span class="badge badge-B">B</span></td>
+          <td>آگاهی از برند قابل سنجش</td>
+        </tr>
+        <tr>
+          <td><b>تبلیغات اینستاگرام (تعرفه‌ای)</b><br><span class="src-tag">VERIFIED</span></td>
+          <td>نمایش پست/استوری در پیج‌های منتخب اینستاگرام (انتخاب بر اساس نرخ تعامل و قیمت‌گذاری شفاف)؛ چون کاربر پیج مقصد را واقعی می‌بیند و دنبال می‌کند، اثر آن روی رشد پیج مستقیم‌تر از فرمت بازدیدی است</td>
+          <td>Awareness / Follow</td>
+          <td><span class="badge badge-B">B</span></td>
+          <td>رشد دنبال‌کننده</td>
+        </tr>
+        <tr>
+          <td><b>همکاری با اینفلوئنسر</b><br><span class="src-tag">VERIFIED</span></td>
+          <td>معرفی برند توسط اینفلوئنسرهای مرتبط با تولید محتوای اختصاصی؛ دسترسی به بیش از ۲,۰۰۰ اینفلوئنسر و انتخاب هوشمند پیج/اینفلوئنسر از طریق ابزار تحلیلی سنجاب (نرخ تعامل، میانگین بازدید، تاریخچه تبلیغات)</td>
+          <td>Awareness / Follow</td>
+          <td><span class="badge badge-B">B</span></td>
+          <td>رشد پیج با اعتماد شخص ثالث</td>
+        </tr>
+        <tr>
+          <td><b>ریتنشن مارکتینگ</b> (پوش / ایمیل / پیامک — نجوا)<br><span class="src-tag">VERIFIED</span></td>
+          <td>بعد از تجمیع پایگاه مشتریان از فاز ۱، برای افزایش خرید مجدد از کانال مستقل مونزا</td>
+          <td>Purchase → Repeat</td>
+          <td><span class="badge badge-C">C</span></td>
+          <td>افزایش خرید مجدد</td>
+        </tr>
+        <tr>
+          <td><b>تبلیغات پیامکی هدفمند جغرافیایی</b><br><span class="src-tag">VERIFIED</span></td>
+          <td>هم‌زمانی کمپین با حضور نمایشگاهی در تهران/اصفهان/مشهد/تبریز برای تقویت ترافیک محلی</td>
+          <td>Awareness → Visit</td>
+          <td><span class="badge badge-C">C</span></td>
+          <td>تقویت اثر رویداد/نمایشگاه</td>
+        </tr>
+        <tr>
+          <td><b>گسترش شبکه‌های اجتماعی</b> (تلگرام / لینکدین)<br><span class="src-tag">VERIFIED</span></td>
+          <td>پس از اثبات عملکرد در اینستاگرام، گسترش حضور به +۲,۵۰۰ کانال تلگرامی و لینکدین برای مخاطب B2B/حرفه‌ای</td>
+          <td>Awareness</td>
+          <td><span class="badge badge-C">C</span></td>
+          <td>گسترش دامنه پلتفرم‌ها</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="font-size:12px;color:var(--muted);margin-top:10px;">توجه: مطابق اصل Need-based Selling، فاز ۱ اجرا صرفاً بر مبنای ۶ ردیف اولویت A تعریف می‌شود؛ ردیف‌های B و C نقشه راه هستند، نه پیشنهاد خرید هم‌زمان.</p>
+  </section>
+
+  <!-- 7. MEDIA MIX -->
+  <section id="section-7" class="tab-panel">
+    <div class="sec-head"><div class="sec-num">۷</div><div><h2>ترکیب رسانه‌ای فاز ۱</h2><div class="sec-sub">Media Mix</div></div></div>
+    <div class="card">
+      <p style="margin-top:0;">فاز ۱ (ماه ۱ تا ۲) روی شش خدمت A متمرکز است: چهار خدمت برای ساخت قیف فروش سایت، و یک خدمت مستقل (اینستاگرام بازدیدی) برای رشد شبکه‌های اجتماعی مونزا. تصمیم توسعه به B/C در بند ۱۲ (Timeline) بر اساس داده هر دو مسیر گرفته می‌شود.</p>
+      <div class="grid-3">
+        <div>
+          <div class="kicker">لایه بالای قیف — Awareness/Visit</div>
+          <ul class="clean">
+            <li>تبلیغات همسان با هدفمندسازی رفتارمحور/کلیدواژه‌ای</li>
+            <li>Google Search Ads روی کلمات کلیدی دسته‌بندی و برند</li>
+          </ul>
+        </div>
+        <div>
+          <div class="kicker">لایه پایین قیف — Conversion</div>
+          <ul class="clean">
+            <li>ریتارگتینگ عمومی سایت (بازدیدکنندگان بدون خرید)</li>
+            <li>کمپین محصول برای سبد خرید رهاشده و محصولات مشابه، هم‌زمان با ریتارگتینگ پایه</li>
+          </ul>
+        </div>
+        <div>
+          <div class="kicker">لایه شبکه‌های اجتماعی — رشد پیج و بازدید پست</div>
+          <ul class="clean">
+            <li>فاز ۱: تبلیغات اینستاگرام بازدیدی برای افزایش بازدید پست‌ها</li>
+            <li>فاز ۲: تبلیغات تعرفه‌ای + همکاری اینفلوئنسر برای رشد دنبال‌کننده، پس از انتخاب پیج/اینفلوئنسر مناسب با سنجاب</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. BUDGET SCENARIOS -->
+  <section id="section-8" class="tab-panel">
+    <div class="sec-head"><div class="sec-num">۸</div><div><h2>سناریوهای بودجه</h2><div class="sec-sub">Budget Scenarios</div></div></div>
+    <div class="grid-3">
+      <div class="scenario">
+        <h3>محافظه‌کارانه</h3>
+        <div class="stag">شروع کم‌ریسک و تست بازار</div>
+        <div style="font-size:20px;font-weight:800;color:var(--monza-dark);margin-bottom:10px;">۲۰۰ میلیون تومان <span style="font-size:11.5px;font-weight:400;color:var(--muted);">/ ماهانه</span></div>
+        <div class="alloc-bar"><span style="width:40%;background:var(--monza-orange);"></span><span style="width:25%;background:#2f80c9;"></span><span style="width:15%;background:#8a8f98;"></span><span style="width:5%;background:#c98a2c;"></span><span style="width:15%;background:var(--client-input);"></span></div>
+        <div class="alloc-legend"><span><i style="background:var(--monza-orange);"></i>همسان + هدفمندسازی ۴۰٪ (۸۰ میلیون تومان)</span><span><i style="background:#2f80c9;"></i>Google Search ۲۵٪ (۵۰ میلیون تومان)</span><span><i style="background:#8a8f98;"></i>ریتارگتینگ ۱۵٪ (۳۰ میلیون تومان)</span><span><i style="background:#c98a2c;"></i>کمپین محصول ۵٪ (۱۰ میلیون تومان)</span><span><i style="background:var(--client-input);"></i>اینستاگرام بازدیدی ۱۵٪ (۳۰ میلیون تومان)</span></div>
+        <ul class="clean">
+          <li><b>هدف:</b> اعتبارسنجی اینکه کدام کانال برای دامنه جدید Traffic باکیفیت می‌آورد، و تست اولیه واکنش مخاطب به تبلیغات اینستاگرام</li>
+          <li><b>Testing Plan:</b> ۲ تا ۳ مخاطب‌شناسی مجزا در همسان، مقایسه CTR و نرخ خروج؛ در اینستاگرام مقایسه ۲ فرمت بازدیدی</li>
+          <li><b>Expected Learning:</b> شناسایی مخاطب‌شناسی و کلمات کلیدی با پایین‌ترین هزینه بازدید معتبر؛ نرخ بازدید به ازای تومان در اینستاگرام</li>
+          <li><b>Scaling Logic:</b> فقط ترکیب برنده وارد سناریوی پیشنهادی با بودجه بالاتر می‌شود</li>
+        </ul>
+      </div>
+      <div class="scenario reco">
+        <h3>پیشنهادی <span class="badge badge-A" style="margin-right:6px;">Recommended</span></h3>
+        <div class="stag">سناریوی اصلی برای فاز ۱</div>
+        <div style="font-size:20px;font-weight:800;color:var(--monza-orange);margin-bottom:10px;">۳۵۰ میلیون تومان <span style="font-size:11.5px;font-weight:400;color:var(--muted);">/ ماهانه</span></div>
+        <div class="alloc-bar"><span style="width:30%;background:var(--monza-orange);"></span><span style="width:20%;background:#2f80c9;"></span><span style="width:20%;background:#8a8f98;"></span><span style="width:10%;background:#c98a2c;"></span><span style="width:20%;background:var(--client-input);"></span></div>
+        <div class="alloc-legend"><span><i style="background:var(--monza-orange);"></i>همسان + هدفمندسازی ۳۰٪ (۱۰۵ میلیون تومان)</span><span><i style="background:#2f80c9;"></i>Google Search ۲۰٪ (۷۰ میلیون تومان)</span><span><i style="background:#8a8f98;"></i>ریتارگتینگ ۲۰٪ (۷۰ میلیون تومان)</span><span><i style="background:#c98a2c;"></i>کمپین محصول ۱۰٪ (۳۵ میلیون تومان)</span><span><i style="background:var(--client-input);"></i>اینستاگرام بازدیدی ۲۰٪ (۷۰ میلیون تومان)</span></div>
+        <ul class="clean">
+          <li><b>هدف:</b> تعادل بین جذب ترافیک جدید، تبدیل بازدیدکنندگان فعلی، و اجرای جدی‌تر هدف رشد اینستاگرام مونزا</li>
+          <li><b>Testing Plan:</b> A/B روی کریتیو همسان (محور گارانتی ۶۰ ماهه در برابر محور قیمت/تخفیف)؛ در اینستاگرام تست محتوای محصول‌محور در برابر محتوای برندمحور</li>
+          <li><b>Expected Learning:</b> نرخ تبدیل واقعی سایت، ارزش هر بازدید ریتارگت‌شده، و نرخ رشد دنبال‌کننده به ازای بودجه اینستاگرام</li>
+          <li><b>Scaling Logic:</b> افزایش سهم ریتارگتینگ/کمپین محصول متناسب با رشد بازدیدکنندگان؛ افزودن فرمت تعرفه‌ای اینستاگرام اگر بازدیدی نتیجه داد</li>
+        </ul>
+      </div>
+      <div class="scenario">
+        <h3>رشد</h3>
+        <div class="stag">توسعه و Scale پس از اعتبارسنجی فاز ۱</div>
+        <div style="font-size:20px;font-weight:800;color:var(--monza-dark);margin-bottom:10px;">۶۰۰ میلیون تومان <span style="font-size:11.5px;font-weight:400;color:var(--muted);">/ ماهانه</span></div>
+        <div class="alloc-bar"><span style="width:20%;background:var(--monza-orange);"></span><span style="width:20%;background:#2f80c9;"></span><span style="width:20%;background:#8a8f98;"></span><span style="width:25%;background:var(--client-input);"></span><span style="width:15%;background:#c98a2c;"></span></div>
+        <div class="alloc-legend"><span><i style="background:var(--monza-orange);"></i>همسان ۲۰٪ (۱۲۰ میلیون تومان)</span><span><i style="background:#2f80c9;"></i>Google Search ۲۰٪ (۱۲۰ میلیون تومان)</span><span><i style="background:#8a8f98;"></i>ریتارگتینگ + کمپین محصول ۲۰٪ (۱۲۰ میلیون تومان)</span><span><i style="background:var(--client-input);"></i>اینستاگرام (بازدیدی + تعرفه‌ای + اینفلوئنسر) ۲۵٪ (۱۵۰ میلیون تومان)</span><span><i style="background:#c98a2c;"></i>بیلبورد دیجیتال + رپورتاژ ۱۵٪ (۹۰ میلیون تومان)</span></div>
+        <ul class="clean">
+          <li><b>هدف:</b> تثبیت هر دو مسیر: قیف فروش سایت و رشد ساختاریافته شبکه‌های اجتماعی (فرمت تعرفه‌ای + اینفلوئنسر)</li>
+          <li><b>Testing Plan:</b> سنجش اثر ترکیبی Awareness روی نرخ تبدیل سایت؛ مقایسه اینفلوئنسرهای مختلف با گزارش سنجاب</li>
+          <li><b>Expected Learning:</b> سهم واقعی Awareness در کاهش CAC؛ کدام ترکیب (تعرفه‌ای/اینفلوئنسر) بهترین نسبت رشد دنبال‌کننده به هزینه را دارد</li>
+          <li><b>Scaling Logic:</b> ورود ریتنشن مارکتینگ (نجوا) پس از تجمیع پایگاه مشتریان خریدار؛ گسترش اجتماعی به تلگرام/لینکدین در صورت موفقیت اینستاگرام</li>
+        </ul>
+      </div>
+    </div>
+    <p style="font-size:12px;color:var(--muted);margin-top:14px;">تخصیص کانال‌ها در هر سناریو بر مبنای سهم درصدی از بودجه کل تعیین شده است؛ در اجرای واقعی، این ارقام بر اساس CPM/CPC روز پنل یکتانت و عملکرد هفتگی کمپین تنظیم می‌شوند.</p>
+  </section>
+
+  <!-- 9. KPI FRAMEWORK -->
+  <section id="section-9" class="tab-panel">
+    <div class="sec-head"><div class="sec-num">۹</div><div><h2>چارچوب KPI</h2><div class="sec-sub">KPI Framework</div></div></div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>مرحله قیف</th><th>KPI پیشنهادی</th><th>یادداشت</th></tr></thead>
+        <tbody>
+          <tr><td>Impression</td><td>حجم نمایش، فرکانس مؤثر</td><td>پایه سنجش Reach کمپین همسان و بیلبورد دیجیتال</td></tr>
+          <tr><td>Click</td><td>CTR بر اساس مخاطب‌شناسی</td><td>معیار انتخاب بهترین سگمنت برای Scale در سناریوی رشد</td></tr>
+          <tr><td>Landing Page Visit</td><td>نرخ خروج، زمان ماندگاری</td><td>سنجه سلامت تجربه کاربری سایت جدید</td></tr>
+          <tr><td>Add to Cart</td><td>نرخ افزودن به سبد</td><td>ورودی اصلی برای کمپین محصول/سبد رهاشده</td></tr>
+          <tr><td>Purchase</td><td>نرخ تبدیل نهایی، هزینه جذب مشتری (CAC)</td><td>هدف نهایی فاز ۱ و ۲</td></tr>
+          <tr><td>Repeat Purchase</td><td>نرخ بازگشت خرید</td><td>فعال می‌شود پس از ورود ریتنشن مارکتینگ (فاز C)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="kicker" style="margin-top:26px;">شاخص‌های شبکه‌های اجتماعی</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>هدف</th><th>KPI پیشنهادی</th><th>یادداشت</th></tr></thead>
+        <tbody>
+          <tr><td>افزایش بازدید پست</td><td>Reach / Impression هر پست تبلیغ‌شده</td><td>مستقیماً از پنل تبلیغات بازدیدی اینستاگرام یکتانت قابل گزارش است <span class="src-tag">VERIFIED</span></td></tr>
+          <tr><td>رشد پیج</td><td>نرخ رشد دنبال‌کننده (Follower Growth Rate)</td><td>از پنل اینستاگرام مونزا استخراج و به داده کمپین (تاریخ، بودجه، پیج مقصد) پیوند داده می‌شود</td></tr>
+          <tr><td>کیفیت تعامل</td><td>نرخ تعامل پست‌های تبلیغ‌شده (Engagement Rate)</td><td>از ابزار تحلیلی سنجاب یکتانت برای پیج‌های تعرفه‌ای/اینفلوئنسری قابل استخراج است <span class="src-tag">VERIFIED</span></td></tr>
+          <tr><td>پل بین اینستاگرام و سایت</td><td>کلیک/بازدید پروفایل ناشی از کمپین</td><td>پیش‌نیاز: لینک بیو و/یا UTM روی صفحه پروفایل مونزا (بند ۱۰)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 10. MEASUREMENT & TRACKING -->
+  <section id="section-10" class="tab-panel">
+    <div class="sec-head"><div class="sec-num">۱۰</div><div><h2>اندازه‌گیری و ردیابی</h2><div class="sec-sub">Measurement &amp; Tracking</div></div></div>
+    <div class="card">
+      <ul class="clean">
+        <li><span class="chip recommend">RECOMMENDATION</span>&nbsp; پیش از هرگونه خرید رسانه، وضعیت نصب Google Analytics / Tag Manager و پیکسل ریتارگتینگ یکتانت روی monzaelectric.shop باید تأیید شود (اطلاعات فعلی مؤید نصب یا عدم نصب آن نیست).</li>
+        <li>تعریف UTM استاندارد برای هر کانال (همسان، Google Search، ریتارگتینگ) تا امکان مقایسه عملکرد در گزارش‌های یکتانت و ابزار تحلیل داخلی مونزا فراهم شود.</li>
+        <li>گزارش‌دهی دوره‌ای از پنل یکتانت (نمایش، کلیک، بازدید) در کنار داده فروش داخلی مونزا برای محاسبه CAC واقعی.</li>
+        <li>ثبت جداگانه ترافیک/فروش کانال دیجی‌کالا (حتی به‌صورت تخمینی از آلدی) برای مقایسه سهم کانال مستقل در طول زمان.</li>
+        <li>برای پل زدن بین کمپین‌های اینستاگرام و سایت: قرار دادن لینک UTM‌دار در بیوی پیج مونزا، و ثبت هفتگی Reach و تعداد دنبال‌کننده از پنل اینستاگرام.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 11. OPTIMIZATION -->
+  <section id="section-11" class="tab-panel">
+    <div class="sec-head"><div class="sec-num">۱۱</div><div><h2>برنامه بهینه‌سازی</h2><div class="sec-sub">Optimization Plan</div></div></div>
+    <div class="card">
+      <ul class="clean">
+        <li><b>هفته ۱ تا ۲:</b> راه‌اندازی و کنترل صحت Tracking، بدون تصمیم بهینه‌سازی زودهنگام.</li>
+        <li><b>هفته ۳ تا ۴:</b> بررسی اولیه CTR و نرخ خروج به تفکیک مخاطب‌شناسی؛ حذف سگمنت‌های ضعیف.</li>
+        <li><b>ماه ۲:</b> تخصیص مجدد بودجه به نفع کانال با پایین‌ترین هزینه بازدید معتبر (بر اساس سناریوی محافظه‌کارانه → پیشنهادی).</li>
+        <li><b>ماه ۳ به بعد:</b> تست A/B پیام کریتیو (گارانتی ۶۰ ماهه در برابر پیام قیمت/تخفیف) و تصمیم‌گیری درباره ورود خدمات B/C.</li>
+        <li><b>موازی، از ماه ۱:</b> پایش هفتگی Reach/Engagement پست‌های تبلیغ‌شده اینستاگرام؛ از ماه ۲، مقایسه فرمول‌های محتوایی مختلف (محصول‌محور در برابر برندمحور) برای بهینه‌سازی نرخ رشد دنبال‌کننده پیش از ورود فرمت تعرفه‌ای/اینفلوئنسر در فاز ۲.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 12. TIMELINE -->
+  <section id="section-12" class="tab-panel">
+    <div class="sec-head"><div class="sec-num">۱۲</div><div><h2>نقشه راه زمانی</h2><div class="sec-sub">Timeline</div></div></div>
+    <div class="card">
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="phase-tag">فاز ۰ — آماده‌سازی (هفته ۱)</div>
+          <h4>راه‌اندازی زیرساخت اندازه‌گیری و انتخاب سناریوی بودجه</h4>
+          <p style="margin:0;font-size:13px;color:#555;">تأیید/نصب Tracking (Google Analytics، پیکسل ریتارگتینگ)، انتخاب یکی از سه سناریوی بودجه (محافظه‌کارانه/پیشنهادی/رشد) برای شروع اجرا.</p>
+        </div>
+        <div class="tl-item">
+          <div class="phase-tag">فاز ۱ — ساخت قیف (ماه ۱ تا ۲)</div>
+          <h4>اجرای ۶ خدمت اولویت A</h4>
+          <p style="margin:0;font-size:13px;color:#555;">تبلیغات همسان + هدفمندسازی، Google Search Ads، راه‌اندازی ریتارگتینگ پایه، فعال‌سازی کمپین محصول (سبد رهاشده/محصولات مشابه)، و شروع تبلیغات اینستاگرام بازدیدی برای افزایش بازدید پست‌ها.</p>
+        </div>
+        <div class="tl-item">
+          <div class="phase-tag">فاز ۲ — بهینه‌سازی و تکمیل قیف (ماه ۳ تا ۴)</div>
+          <h4>تصمیم توسعه به خدمات B + شروع رشد ساختاریافته پیج</h4>
+          <p style="margin:0;font-size:13px;color:#555;">بهینه‌سازی تخصیص بودجه بین ۶ کانال فاز ۱ بر اساس داده واقعی؛ انتخاب پیج/اینفلوئنسر مناسب با سنجاب و راه‌اندازی تبلیغات تعرفه‌ای + همکاری اینفلوئنسر برای رشد دنبال‌کننده؛ ارزیابی افزودن رپورتاژ آگهی و بیلبورد دیجیتال.</p>
+        </div>
+        <div class="tl-item">
+          <div class="phase-tag">فاز ۳ — رشد و ریتنشن (ماه ۵ تا ۶)</div>
+          <h4>ورود احتمالی ریتنشن مارکتینگ و کانال‌های تکمیلی</h4>
+          <p style="margin:0;font-size:13px;color:#555;">مشروط به وجود پایگاه مشتریان کافی از فازهای قبل؛ ارزیابی SMS جغرافیایی هم‌زمان با تقویم نمایشگاهی؛ گسترش شبکه‌های اجتماعی به تلگرام/لینکدین در صورت موفقیت اینستاگرام.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13. EXPECTED OUTCOMES -->
+  <section id="section-13" class="tab-panel">
+    <div class="sec-head"><div class="sec-num">۱۳</div><div><h2>دستاوردهای مورد انتظار</h2><div class="sec-sub">Expected Outcomes</div></div></div>
+    <div class="card">
+      <ul class="clean">
+        <li><span class="chip recommend">RECOMMENDATION</span>&nbsp; ایجاد <b>اولین مسیر Performance قابل اندازه‌گیری</b> برای مونزا — چیزی که تا امروز در هیچ‌یک از فعالیت‌های تبلیغاتی قبلی (VOD منقرض‌شده، جای‌گذاری فیلم، بیلبورد فیزیکی) وجود نداشته است.</li>
+        <li>شفافیت داده‌ای درباره اینکه <b>کدام بخش از تقاضا واقعاً از کانال مستقل می‌آید</b> — پیش‌نیاز هر تصمیم آینده درباره تخصیص بودجه میان کانال‌های فروش مونزا (آفلاین، دیجی‌کالا، سایت مستقل).</li>
+        <li>فرمت‌های نمایش تبلیغات همسان و بیلبورد دیجیتال (<span class="src-tag">VERIFIED</span> نمایش انحصاری، بدون حضور سایر تبلیغات، گزارش لحظه‌ای اثربخشی) امکان انتقال پیام «۶۰ ماه گارانتی» را در محیطی باکیفیت‌تر از بیلبورد فیزیکی منفرد فراهم می‌کنند.</li>
+        <li>افزایش قابل‌اندازه‌گیری بازدید پست‌های اینستاگرام از ماه ۱، و مسیر ساختاریافته برای رشد پیج از فاز ۲ به بعد.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="tab-pager" id="tabPager"></div>
+
+  </div>
+</div>
+
+<div class="footer-wrap">
+  <div class="footer-box">
+    <div class="fwordmark">MON<span>ZA</span> × یکتانت</div>
+    <p style="margin:0;color:#888;">تهیه‌شده توسط تیم فروش B2B یکتانت &nbsp;|&nbsp; ۲۲ شهریور ۱۴۰۵</p>
+  </div>
+</div>
+
+<script>
+  var TAB_TITLES = {
+    1:"خلاصه مدیریتی", 2:"شناخت کسب‌وکار", 3:"چالش فعلی", 4:"فرصت بازاریابی",
+    5:"استراتژی پیشنهادی", 6:"خدمات پیشنهادی", 7:"ترکیب رسانه‌ای", 8:"سناریوهای بودجه",
+    9:"چارچوب KPI", 10:"اندازه‌گیری و ردیابی", 11:"برنامه بهینه‌سازی", 12:"نقشه راه زمانی",
+    13:"دستاوردهای مورد انتظار"
+  };
+  var TAB_COUNT = 13;
+  var PERSIAN_DIGITS = ["۰","۱","۲","۳","۴","۵","۶","۷","۸","۹"];
+  function toPersianDigits(num){
+    return String(num).split("").map(function(d){ return PERSIAN_DIGITS[+d] !== undefined ? PERSIAN_DIGITS[+d] : d; }).join("");
+  }
+  function renderPager(n){
+    var pager = document.getElementById("tabPager");
+    var prevN = n - 1, nextN = n + 1;
+    var prevHtml = prevN >= 1
+      ? '<button class="pager-btn" onclick="showTab(' + prevN + ')"><div class="pg-tag">◀ بخش قبلی</div><div class="pg-title">' + toPersianDigits(prevN) + '. ' + TAB_TITLES[prevN] + '</div></button>'
+      : '<button class="pager-btn" disabled><div class="pg-tag">◀ بخش قبلی</div><div class="pg-title">—</div></button>';
+    var nextHtml = nextN <= TAB_COUNT
+      ? '<button class="pager-btn" onclick="showTab(' + nextN + ')"><div class="pg-tag">بخش بعدی ▶</div><div class="pg-title">' + toPersianDigits(nextN) + '. ' + TAB_TITLES[nextN] + '</div></button>'
+      : '<button class="pager-btn" disabled><div class="pg-tag">بخش بعدی ▶</div><div class="pg-title">—</div></button>';
+    pager.innerHTML = prevHtml + nextHtml;
+  }
+  function showTab(n){
+    for (var i = 1; i <= TAB_COUNT; i++){
+      var panel = document.getElementById("section-" + i);
+      var btn = document.getElementById("tabbtn-" + i);
+      if (panel) panel.classList.toggle("active", i === n);
+      if (btn) btn.classList.toggle("active", i === n);
+    }
+    renderPager(n);
+    var activePanel = document.getElementById("section-" + n);
+    if (activePanel) activePanel.scrollIntoView({behavior:"smooth", block:"start"});
+    var activeBtn = document.getElementById("tabbtn-" + n);
+    if (activeBtn) activeBtn.scrollIntoView({behavior:"smooth", block:"nearest", inline:"center"});
+  }
+  renderPager(1);
+</script>
+</body>
+</html>
